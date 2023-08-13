@@ -212,6 +212,7 @@
     display: flex;
     align-items: center;
     font-family: "DegularLight";
+    width: calc(100vw/24);
 }
 .part1-content>.content>.detail>.ic>div:nth-child(n) span {
     display: flex;
@@ -480,17 +481,22 @@
 .contact__2 > h2 {
     color: var(--color-text-onwhite);
     font-family: "DegularLight" !important;
-    font-size: 64px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 500;
     line-height: 72px; /* 112.5% */
     grid-column-start: 2;
     grid-column-end: 10;
 }
+.contact__1 > h2 {
+    margin-top: 42px;
+    padding: 0;
+
+}
 .contact__1 > span {
     color:var(--tag-pin);
-
-    font-size: 16px;
+    font-family: "DegularLight" !important;
+    font-size: 12.4px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -500,12 +506,16 @@
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row: 1;
+
+    height: fit-content;
+    margin-top: 167px;
 }
 .contact__1 div.maps {
     grid-column-start: 10;
     grid-column-end: 15;
 
     height: calc(calc(100vw/22) * 5);
+    margin-top: 61px;
     overflow: hidden;
 }
 .contact__1 div.info {
@@ -514,33 +524,41 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 61px;
+}
+.contact__1 div.info ul,
+.contact__1 div.info p {
+    margin:20px 0 0 0;
 }
 .contact__1 div.info ul {
     padding:0;
-    margin:0;
+    
     list-style-type: none;
 }
 .contact__1 div.info h3 {
     color: var(--gold);
     font-family: "DegularLight";
-    font-size: 32px;
+    font-size: 24.42px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     line-height: normal;
 }
 .contact__1 div.info p,
 .contact__1 div.info ul li {
     color: var(--color-text-onwhite);
     font-family: "DegularLight";
-    font-size: 18px;
+    font-size: 14.2px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
-
+.contact__2 > h2 {
+ 
+}
 .contact__2 > h2,
 .contact__2 > div.input {
     grid-row: 1;
+    margin-top: 100px;
 }
 .contact__2 > div.form {
     grid-row: 2;
@@ -548,7 +566,7 @@
 .contact__2 > div.input {
     grid-column-start: 10;
     grid-column-end: 19;
-
+ 
     display: flex;
     flex-direction: column;
     
@@ -557,6 +575,8 @@
     grid-column-start: 10;
     grid-column-end: 14;
     display: flex;
+    height: 321px;
+    align-items: center;
 }
 
 .contact__2 > div.input input {
@@ -564,7 +584,7 @@
     border: none;
     color: var(---input-color);
     font-family: "FreightBigProLight";
-    font-size: 64px;
+    font-size: 52px;
     font-style: normal;
     font-weight: 400;
     line-height: 82px; /* 128.125% */
@@ -572,13 +592,16 @@
 .contact__2 > div.form p {
     color: var(--color-text-onwhite);
     font-family: "DegularLight";
-    font-size: 32px;
+    font-size: 24.2px;
     font-style: normal;
     font-weight: 600;
     line-height: 38px; /* 118.75% */
 }
 
-
+.contact__2 > div.form span {
+    display: flex;
+    margin-left: 15px;
+}
 
 
 
