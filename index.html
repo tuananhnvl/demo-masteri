@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="./styles/lenis.css">
     <link rel="stylesheet" href="./styles/grid.css">
     <link rel="stylesheet" href="./styles/hook.css">
+    <link rel="stylesheet" href="./styles/gsap.css">
     <link rel="stylesheet" href="./styles/combo-page.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
 </head>
 
 <body>
+    <div id="cursor"></div>
     <div id="tool">
-        <button onclick="myFunction()" id="togglegrid">Grid</button>
-        <button onclick="baseWeb()">WEB DESIGN</button>
+        <button onclick="openGrid()" id="togglegrid">Grid</button>
+        <button onclick="openFigma()">WEB DESIGN</button>
     </div>
     <div class="demo-grid" style="opacity:1" id="gridgrid">
         <div class="grid-system">
@@ -42,31 +47,36 @@
         </div>
     </div>
     <section class="banner grid-system">
+        <div class="banner-img">
+            <image src="../assets/img/banner.png" alt="" />
+        </div>
         <div class="nav">
             <div class="logo">
                 MASTERI
             </div>
             <div class="menu-item">
                 <ul>
-                    <li><a>About</a></li>
-                    <li><a>Residences</a></li>
-                    <li><a>Location</a></li>
-                    <li><a>Gallery</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a class="HoverText">About</a></li>
+                    <li><a class="HoverText">Residences</a></li>
+                    <li><a class="HoverText">Location</a></li>
+                    <li><a class="HoverText">Gallery</a></li>
+                    <li><a class="HoverText">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="tit  grid-system">
+
             <h1>Find a home that suits your lifestyle</h1>
-            <p>Built on centuries of tradition and dedicated to innovating the luxury real estate industry, Masteri
+            <p id="SplitText">Built on centuries of tradition and dedicated to innovating the luxury real estate
+                industry, Masteri
                 Centre Point offers transformative experiences through a global network of exceptional and outstanding
                 agents.</p>
             <span class="type-name">SUPERIOR</span>
             <span class="type-num">02</span>
             <div class="type-state">
-                <span>02</span>
-                <span class="siff">/</span>
-                <span>03</span>
+                <span>02&nbsp;</span>
+                <!--   <span class="siff">/</span> -->
+                <span>/&nbsp;03</span>
             </div>
         </div>
         <div class="btn-eff">
@@ -77,124 +87,138 @@
     </section>
     <section class="part1-content ">
         <div class="tit grid-system">
-            <span class="type-name">RESIDENCES</span>
+            <span class="type-name" id="sdasd">
+                <p id="gox1">RESIDENCES</p>
+            </span>
             <div class="type-state">
-                <span>01</span>
-                <span class="siff">/</span>
-                <span>03</span>
+                <span>01&nbsp;</span>
+                <!--     <span class="siff">/</span> -->
+                <span>/&nbsp;03</span>
             </div>
             <h2>For those who seek an exceptional home and life, there is only
                 <span>Masteri&nbsp;Centre&nbsp;Point</span>
             </h2>
         </div>
         <div class="content grid-system">
-            <div class="img">
+            <div class="img  slider-img-custom-004">
                 <image src="./assets/img/p1.png" alt="" />
             </div>
             <div class="line"></div>
             <div class="detail">
-                <span>01</span>
-                <h3>Superior Apartment with City View & Balcony</h3>
-                <div class="ic">
-                    <div>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <g clip-path="url(#clip0_1_81)">
-                                    <path
-                                        d="M20 10.8333H1.66667V3.33333C1.66667 3.11232 1.57887 2.90036 1.42259 2.74408C1.26631 2.5878 1.05435 2.5 0.833333 2.5C0.61232 2.5 0.400358 2.5878 0.244078 2.74408C0.0877974 2.90036 0 3.11232 0 3.33333L0 17.5C0 17.721 0.0877974 17.933 0.244078 18.0893C0.400358 18.2455 0.61232 18.3333 0.833333 18.3333C1.05435 18.3333 1.26631 18.2455 1.42259 18.0893C1.57887 17.933 1.66667 17.721 1.66667 17.5V15.8333H18.3333V17.5C18.3333 17.721 18.4211 17.933 18.5774 18.0893C18.7337 18.2455 18.9457 18.3333 19.1667 18.3333C19.3877 18.3333 19.5996 18.2455 19.7559 18.0893C19.9122 17.933 20 17.721 20 17.5V10.8333Z"
-                                        fill="#C79358" />
-                                    <path
-                                        d="M5.83333 9.16675C5.33888 9.16675 4.85553 9.02013 4.44441 8.74542C4.03328 8.47072 3.71285 8.08027 3.52363 7.62346C3.33442 7.16664 3.28491 6.66398 3.38137 6.17902C3.47783 5.69407 3.71594 5.24861 4.06557 4.89898C4.4152 4.54935 4.86066 4.31125 5.34561 4.21479C5.83056 4.11832 6.33323 4.16783 6.79004 4.35705C7.24686 4.54627 7.6373 4.8667 7.91201 5.27782C8.18671 5.68895 8.33333 6.1723 8.33333 6.66675C8.33333 7.32979 8.06994 7.96568 7.6011 8.43452C7.13226 8.90336 6.49637 9.16675 5.83333 9.16675Z"
-                                        fill="#C79358" />
-                                    <path
-                                        d="M20 9.16667H10.8333C10.6123 9.16667 10.4004 9.07887 10.2441 8.92259C10.0878 8.76631 10 8.55435 10 8.33333V5.83333C10 5.61232 10.0878 5.40036 10.2441 5.24408C10.4004 5.0878 10.6123 5 10.8333 5H17.5C18.163 5 18.7989 5.26339 19.2678 5.73223C19.7366 6.20107 20 6.83696 20 7.5V9.16667Z"
-                                        fill="#C79358" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_81">
-                                        <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></span>
-                        <span>3</span>
-                    </div>
-                    <div>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <g clip-path="url(#clip0_1_91)">
-                                    <path
-                                        d="M15.8333 3.75C15.8333 2.75544 15.4382 1.80161 14.735 1.09835C14.0317 0.395088 13.0779 0 12.0833 0C11.0888 0 10.1349 0.395088 9.43168 1.09835C8.72842 1.80161 8.33333 2.75544 8.33333 3.75V5H10V3.75C10 3.19747 10.2195 2.66756 10.6102 2.27686C11.0009 1.88616 11.5308 1.66667 12.0833 1.66667C12.6359 1.66667 13.1658 1.88616 13.5565 2.27686C13.9472 2.66756 14.1667 3.19747 14.1667 3.75V10H0V13.3333C0.00132321 14.438 0.440735 15.497 1.22185 16.2782C2.00296 17.0593 3.062 17.4987 4.16667 17.5V20H5.83333V17.5H14.1667V20H15.8333V17.5C16.938 17.4987 17.997 17.0593 18.7782 16.2782C19.5593 15.497 19.9987 14.438 20 13.3333V10H15.8333V3.75Z"
-                                        fill="#C79358" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_91">
-                                        <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></span>
-                        <span>4</span>
+                <div>
+                    <span>01</span>
+                    <h3>Superior Apartment with City View & Balcony</h3>
+                    <div class="ic">
+                        <div>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_81)">
+                                        <path
+                                            d="M20 10.8333H1.66667V3.33333C1.66667 3.11232 1.57887 2.90036 1.42259 2.74408C1.26631 2.5878 1.05435 2.5 0.833333 2.5C0.61232 2.5 0.400358 2.5878 0.244078 2.74408C0.0877974 2.90036 0 3.11232 0 3.33333L0 17.5C0 17.721 0.0877974 17.933 0.244078 18.0893C0.400358 18.2455 0.61232 18.3333 0.833333 18.3333C1.05435 18.3333 1.26631 18.2455 1.42259 18.0893C1.57887 17.933 1.66667 17.721 1.66667 17.5V15.8333H18.3333V17.5C18.3333 17.721 18.4211 17.933 18.5774 18.0893C18.7337 18.2455 18.9457 18.3333 19.1667 18.3333C19.3877 18.3333 19.5996 18.2455 19.7559 18.0893C19.9122 17.933 20 17.721 20 17.5V10.8333Z"
+                                            fill="#C79358" />
+                                        <path
+                                            d="M5.83333 9.16675C5.33888 9.16675 4.85553 9.02013 4.44441 8.74542C4.03328 8.47072 3.71285 8.08027 3.52363 7.62346C3.33442 7.16664 3.28491 6.66398 3.38137 6.17902C3.47783 5.69407 3.71594 5.24861 4.06557 4.89898C4.4152 4.54935 4.86066 4.31125 5.34561 4.21479C5.83056 4.11832 6.33323 4.16783 6.79004 4.35705C7.24686 4.54627 7.6373 4.8667 7.91201 5.27782C8.18671 5.68895 8.33333 6.1723 8.33333 6.66675C8.33333 7.32979 8.06994 7.96568 7.6011 8.43452C7.13226 8.90336 6.49637 9.16675 5.83333 9.16675Z"
+                                            fill="#C79358" />
+                                        <path
+                                            d="M20 9.16667H10.8333C10.6123 9.16667 10.4004 9.07887 10.2441 8.92259C10.0878 8.76631 10 8.55435 10 8.33333V5.83333C10 5.61232 10.0878 5.40036 10.2441 5.24408C10.4004 5.0878 10.6123 5 10.8333 5H17.5C18.163 5 18.7989 5.26339 19.2678 5.73223C19.7366 6.20107 20 6.83696 20 7.5V9.16667Z"
+                                            fill="#C79358" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_81">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></span>
+                            <span>3</span>
+                        </div>
+                        <div>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_91)">
+                                        <path
+                                            d="M15.8333 3.75C15.8333 2.75544 15.4382 1.80161 14.735 1.09835C14.0317 0.395088 13.0779 0 12.0833 0C11.0888 0 10.1349 0.395088 9.43168 1.09835C8.72842 1.80161 8.33333 2.75544 8.33333 3.75V5H10V3.75C10 3.19747 10.2195 2.66756 10.6102 2.27686C11.0009 1.88616 11.5308 1.66667 12.0833 1.66667C12.6359 1.66667 13.1658 1.88616 13.5565 2.27686C13.9472 2.66756 14.1667 3.19747 14.1667 3.75V10H0V13.3333C0.00132321 14.438 0.440735 15.497 1.22185 16.2782C2.00296 17.0593 3.062 17.4987 4.16667 17.5V20H5.83333V17.5H14.1667V20H15.8333V17.5C16.938 17.4987 17.997 17.0593 18.7782 16.2782C19.5593 15.497 19.9987 14.438 20 13.3333V10H15.8333V3.75Z"
+                                            fill="#C79358" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_91">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></span>
+                            <span>4</span>
+                        </div>
                     </div>
                 </div>
-                <p>The spectacular 15 into 13 room corner residence is perfectly positioned on Fifth Avenue to enjoy the
-                    absolutely dazzling views of Central Park and the fabulous sun-lit Southern exposures grace the
-                    apartment with amazing light throughout the day.</p>
-                <div class="btn">
-                    <p>Explore</p>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-                            fill="none">
-                            <path d="M1.66666 16H28.3333" stroke="#C79358" stroke-width="3" stroke-miterlimit="10"
-                                stroke-linecap="square" stroke-linejoin="bevel" />
-                            <path d="M20 6.66663L29.3333 16L20 25.3333" stroke="#C79358" stroke-width="3"
-                                stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel" />
-                        </svg></span>
+                <div>
+                    <p>The spectacular 15 into 13 room corner residence is perfectly positioned on Fifth Avenue to enjoy
+                        the
+                        absolutely dazzling views of Central Park and the fabulous sun-lit Southern exposures grace the
+                        apartment with amazing light throughout the day.</p>
+                    <div class="btn">
+                        <p>Explore</p>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none">
+                                <path d="M1.66666 16H28.3333" stroke="#C79358" stroke-width="3" stroke-miterlimit="10"
+                                    stroke-linecap="square" stroke-linejoin="bevel" />
+                                <path d="M20 6.66663L29.3333 16L20 25.3333" stroke="#C79358" stroke-width="3"
+                                    stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel" />
+                            </svg></span>
+                    </div>
+
                 </div>
+
             </div>
-            <div class="detail prepare-dom" style="opacity: 0.5;">
-                <span>02</span>
-                <h3>Deluxe Apartment with Garden/River View & Balcony</h3>
-                <div class="ic">
-                    <div>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <g clip-path="url(#clip0_1_81)">
-                                    <path
-                                        d="M20 10.8333H1.66667V3.33333C1.66667 3.11232 1.57887 2.90036 1.42259 2.74408C1.26631 2.5878 1.05435 2.5 0.833333 2.5C0.61232 2.5 0.400358 2.5878 0.244078 2.74408C0.0877974 2.90036 0 3.11232 0 3.33333L0 17.5C0 17.721 0.0877974 17.933 0.244078 18.0893C0.400358 18.2455 0.61232 18.3333 0.833333 18.3333C1.05435 18.3333 1.26631 18.2455 1.42259 18.0893C1.57887 17.933 1.66667 17.721 1.66667 17.5V15.8333H18.3333V17.5C18.3333 17.721 18.4211 17.933 18.5774 18.0893C18.7337 18.2455 18.9457 18.3333 19.1667 18.3333C19.3877 18.3333 19.5996 18.2455 19.7559 18.0893C19.9122 17.933 20 17.721 20 17.5V10.8333Z"
-                                        fill="#C79358" />
-                                    <path
-                                        d="M5.83333 9.16675C5.33888 9.16675 4.85553 9.02013 4.44441 8.74542C4.03328 8.47072 3.71285 8.08027 3.52363 7.62346C3.33442 7.16664 3.28491 6.66398 3.38137 6.17902C3.47783 5.69407 3.71594 5.24861 4.06557 4.89898C4.4152 4.54935 4.86066 4.31125 5.34561 4.21479C5.83056 4.11832 6.33323 4.16783 6.79004 4.35705C7.24686 4.54627 7.6373 4.8667 7.91201 5.27782C8.18671 5.68895 8.33333 6.1723 8.33333 6.66675C8.33333 7.32979 8.06994 7.96568 7.6011 8.43452C7.13226 8.90336 6.49637 9.16675 5.83333 9.16675Z"
-                                        fill="#C79358" />
-                                    <path
-                                        d="M20 9.16667H10.8333C10.6123 9.16667 10.4004 9.07887 10.2441 8.92259C10.0878 8.76631 10 8.55435 10 8.33333V5.83333C10 5.61232 10.0878 5.40036 10.2441 5.24408C10.4004 5.0878 10.6123 5 10.8333 5H17.5C18.163 5 18.7989 5.26339 19.2678 5.73223C19.7366 6.20107 20 6.83696 20 7.5V9.16667Z"
-                                        fill="#C79358" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_81">
-                                        <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></span>
-                        <span>2</span>
-                    </div>
-                    <div>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <g clip-path="url(#clip0_1_91)">
-                                    <path
-                                        d="M15.8333 3.75C15.8333 2.75544 15.4382 1.80161 14.735 1.09835C14.0317 0.395088 13.0779 0 12.0833 0C11.0888 0 10.1349 0.395088 9.43168 1.09835C8.72842 1.80161 8.33333 2.75544 8.33333 3.75V5H10V3.75C10 3.19747 10.2195 2.66756 10.6102 2.27686C11.0009 1.88616 11.5308 1.66667 12.0833 1.66667C12.6359 1.66667 13.1658 1.88616 13.5565 2.27686C13.9472 2.66756 14.1667 3.19747 14.1667 3.75V10H0V13.3333C0.00132321 14.438 0.440735 15.497 1.22185 16.2782C2.00296 17.0593 3.062 17.4987 4.16667 17.5V20H5.83333V17.5H14.1667V20H15.8333V17.5C16.938 17.4987 17.997 17.0593 18.7782 16.2782C19.5593 15.497 19.9987 14.438 20 13.3333V10H15.8333V3.75Z"
-                                        fill="#C79358" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_91">
-                                        <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></span>
-                        <span>3</span>
+            <div class="detail prepare-dom" >
+                <div>
+                    <span>02</span>
+                    <h3>Deluxe Apartment with Garden/River View & Balcony</h3>
+                    <div class="ic">
+                        <div>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_81)">
+                                        <path
+                                            d="M20 10.8333H1.66667V3.33333C1.66667 3.11232 1.57887 2.90036 1.42259 2.74408C1.26631 2.5878 1.05435 2.5 0.833333 2.5C0.61232 2.5 0.400358 2.5878 0.244078 2.74408C0.0877974 2.90036 0 3.11232 0 3.33333L0 17.5C0 17.721 0.0877974 17.933 0.244078 18.0893C0.400358 18.2455 0.61232 18.3333 0.833333 18.3333C1.05435 18.3333 1.26631 18.2455 1.42259 18.0893C1.57887 17.933 1.66667 17.721 1.66667 17.5V15.8333H18.3333V17.5C18.3333 17.721 18.4211 17.933 18.5774 18.0893C18.7337 18.2455 18.9457 18.3333 19.1667 18.3333C19.3877 18.3333 19.5996 18.2455 19.7559 18.0893C19.9122 17.933 20 17.721 20 17.5V10.8333Z"
+                                            fill="#C79358" />
+                                        <path
+                                            d="M5.83333 9.16675C5.33888 9.16675 4.85553 9.02013 4.44441 8.74542C4.03328 8.47072 3.71285 8.08027 3.52363 7.62346C3.33442 7.16664 3.28491 6.66398 3.38137 6.17902C3.47783 5.69407 3.71594 5.24861 4.06557 4.89898C4.4152 4.54935 4.86066 4.31125 5.34561 4.21479C5.83056 4.11832 6.33323 4.16783 6.79004 4.35705C7.24686 4.54627 7.6373 4.8667 7.91201 5.27782C8.18671 5.68895 8.33333 6.1723 8.33333 6.66675C8.33333 7.32979 8.06994 7.96568 7.6011 8.43452C7.13226 8.90336 6.49637 9.16675 5.83333 9.16675Z"
+                                            fill="#C79358" />
+                                        <path
+                                            d="M20 9.16667H10.8333C10.6123 9.16667 10.4004 9.07887 10.2441 8.92259C10.0878 8.76631 10 8.55435 10 8.33333V5.83333C10 5.61232 10.0878 5.40036 10.2441 5.24408C10.4004 5.0878 10.6123 5 10.8333 5H17.5C18.163 5 18.7989 5.26339 19.2678 5.73223C19.7366 6.20107 20 6.83696 20 7.5V9.16667Z"
+                                            fill="#C79358" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_81">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></span>
+                            <span>2</span>
+                        </div>
+                        <div>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_91)">
+                                        <path
+                                            d="M15.8333 3.75C15.8333 2.75544 15.4382 1.80161 14.735 1.09835C14.0317 0.395088 13.0779 0 12.0833 0C11.0888 0 10.1349 0.395088 9.43168 1.09835C8.72842 1.80161 8.33333 2.75544 8.33333 3.75V5H10V3.75C10 3.19747 10.2195 2.66756 10.6102 2.27686C11.0009 1.88616 11.5308 1.66667 12.0833 1.66667C12.6359 1.66667 13.1658 1.88616 13.5565 2.27686C13.9472 2.66756 14.1667 3.19747 14.1667 3.75V10H0V13.3333C0.00132321 14.438 0.440735 15.497 1.22185 16.2782C2.00296 17.0593 3.062 17.4987 4.16667 17.5V20H5.83333V17.5H14.1667V20H15.8333V17.5C16.938 17.4987 17.997 17.0593 18.7782 16.2782C19.5593 15.497 19.9987 14.438 20 13.3333V10H15.8333V3.75Z"
+                                            fill="#C79358" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_91">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></span>
+                            <span>3</span>
+                        </div>
                     </div>
                 </div>
+              <div>
                 <div class="img-perpare">
                     <image src="./assets/img/p2.png" alt="" />
                 </div>
+              </div>
+               
             </div>
         </div>
         <div class="space-btn-custom custom1">
@@ -205,12 +229,12 @@
     </section>
     <section class="part2-content">
         <div class="tit grid-system">
-            <span class="type-name">LOCATION</span>
-            <h2>Positioned in the heart of District 2 to enjoy the <span>most relaxing&nbsp;views</span> of Ho Chi Minh
+            <span class="type-name"><p>LOCATION</p></span>
+            <h2>Positioned in the heart of District 2 to enjoy the <span>most&nbsp;relaxing views</span> of Ho Chi Minh
                 city</h2>
         </div>
         <div class="content grid-system">
-            <div class="detail h72vh">
+            <div class="detail ">
                 <ul>
                     <li>
                         <span>01</span>
@@ -226,14 +250,19 @@
                     </li>
                 </ul>
             </div>
-            <div class="img h72vh">
+            <div class="img ">
                 <image src="./assets/img/building.png" alt="" />
             </div>
-            <div class="item-preview h72vh">
-                <h3>The best District in the city</h3>
-                <p>The spectacular 15 into 13 room corner residence is perfectly positioned on Fifth Avenue to enjoy the
+            <div class="item-preview ">
+                <div>
+                    <h3>The best District in the city</h3>
+                        <p>The spectacular 15 into 13 room corner residence is perfectly positioned on Fifth Avenue to enjoy the
                     absolutely dazzling views of Central Park</p>
-                <image src="./assets/img/building.png" alt="" />
+                </div>
+                <div>
+                    <image src="./assets/img/building.png" alt="" />
+                </div>
+               
             </div>
         </div>
         <div class="space-btn-custom custom1">
@@ -243,62 +272,70 @@
         </div>
     </section>
     <section class="slider-big">
-        <div class="tit-slider">
-            <div>
-                <p>Superior Apartment 3BR</p>
-            </div>
-            <div>
-                <p>Deluxe Apartment 2BR</p>
-            </div>
-            <div>
-                <p>Top Apartment 1BR</p>
+        <div class="bg-sldier-section">
+            <image src="./assets/img/bg.png" alt="" />
+        </div>
+        <div>
+            <div class="tit-slider">
+                <div>
+                    <p class="active-tab-slider-section">Superior Apartment 3BR</p>
+                </div>
+                <div>
+                    <p>Deluxe Apartment 2BR</p>
+                </div>
+                <div>
+                    <p>Top Apartment 1BR</p>
+                </div>
             </div>
         </div>
-        <div class="detail-slider">
-            <div class="layout">
-                <div class="content">
-                    <h2>Selected Images</h2>
-                    <span>Gallery</span>
-                    <h3>Superior Apartment 3 BR / Kitchen View</h3>
-                    <div class="process">
-                        <span>01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        <span>/</span>
-                        <span>120</span>
+        <div>
+            <div class="detail-slider">
+                <div class="layout">
+                    <div class="content">
+                        <h2>Selected Images</h2>
+                        <span>Gallery</span>
+                        <h3>Superior Apartment 3 BR / Kitchen View</h3>
+                        <div class="process">
+                            <span>01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span>/120</span>
+                            <!-- <span></span> -->
+                        </div>
+                        <p>The spectacular 15 into 13 room corner residence is perfectly positioned on Fifth Avenue to enjoy
+                            the absolutely dazzling views of Central Park</p>
+    
+    
+    
                     </div>
-                    <p>The spectacular 15 into 13 room corner residence is perfectly positioned on Fifth Avenue to enjoy
-                        the absolutely dazzling views of Central Park</p>
-
-
-
+                    <!--   <div class="btn">
+                    <div>
+                        <p>Prev</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M1.25 12H21.25" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
+                            <path d="M15 5L22 12L15 19" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p>Next</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M1.25 12H21.25" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
+                            <path d="M15 5L22 12L15 19" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
+                        </svg>
+                    </div>
+                </div> -->
                 </div>
-                <!--   <div class="btn">
-                <div>
-                    <p>Prev</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M1.25 12H21.25" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
-                        <path d="M15 5L22 12L15 19" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
-                    </svg>
-                </div>
-                <div>
-                    <p>Next</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M1.25 12H21.25" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
-                        <path d="M15 5L22 12L15 19" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel"/>
-                    </svg>
-                </div>
-            </div> -->
-            </div>
-
-            <div class="space-btn-custom custom1">
-                <div class="btn-custom-a1" style="background:  rgba(255, 255, 255, 0.10);left: 150% !important;">
-                    <p style="color:#ffff">Discover gallery</p>
+    
+                <div class="space-btn-custom custom1">
+                    <div class="btn-custom-a1" style="background:  rgba(255, 255, 255, 0.10);left: 150% !important;">
+                        <p style="color:#ffff">Discover gallery</p>
+                    </div>
                 </div>
             </div>
+    
         </div>
-
+     
     </section>
     <section class="contact-secion-all">
-   
+
         <div class="grid-contact contact__1">
             <span>CONTACT</span>
             <h2>Location</h2>
@@ -318,11 +355,11 @@
                         <li>sale@masteri.com.vn</li>
                     </ul>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="grid-contact contact__2">
             <h2>Let’s get in touch</h2>
-   
+
             <div class="input">
                 <input type="text" placeholder="Your name" />
                 <input type="text" placeholder="Email address" />
@@ -331,103 +368,261 @@
             </div>
             <div class="form">
                 <p>Submit Form</p>
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-                    fill="none">
-                    <path d="M1.66666 16H28.3333" stroke="#C79358" stroke-width="3" stroke-miterlimit="10"
-                        stroke-linecap="square" stroke-linejoin="bevel" />
-                    <path d="M20 6.66663L29.3333 16L20 25.3333" stroke="#C79358" stroke-width="3"
-                        stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel" />
-                </svg></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M1.66666 16H28.3333" stroke="#C79358" stroke-width="3" stroke-miterlimit="10"
+                            stroke-linecap="square" stroke-linejoin="bevel" />
+                        <path d="M20 6.66663L29.3333 16L20 25.3333" stroke="#C79358" stroke-width="3"
+                            stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="bevel" />
+                    </svg></span>
             </div>
         </div>
 
     </section>
-    
-    
-    <script src="
-    https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js
-    "></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const lenis = new Lenis()
-        lenis.on('scroll', (e) => {
-            console.log(e)
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log('done')
+            init()
+            check()
+            HoverText()
         })
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
+
+        function check() {
+            console.log('ERR when create Lenis > back to df')
         }
-        requestAnimationFrame(raf)
+        function init() {
+
+            /* 
+                        const lenis = new Lenis()
+                        lenis.on('scroll', (e) => {
+                            //console.log(e)
+                        })
+                        function raf(time) {
+                            lenis.raf(time)
+                            requestAnimationFrame(raf)
+                        }
+                        requestAnimationFrame(raf)
+             */
+
+
+
+
+
+
+            gsap.registerPlugin(ScrollTrigger)
+
+            const update = (time, deltaTime, frame) => {
+                lenis.raf(time * 1000)
+            }
+
+            const resize = (e) => {
+                ScrollTrigger.refresh()
+            }
+
+            const lenis = new Lenis({
+                duration: .7,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                infinite: false,
+            })
+
+            lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+                // console.log({ scroll, limit, velocity, direction, progress })
+                ScrollTrigger.update()
+            })
+
+            gsap.ticker.add(update)
+
+            ScrollTrigger.scrollerProxy(document.body, {
+                scrollTop(value) {
+                    if (arguments.length) {
+                        lenis.scroll = value
+                    }
+                    return lenis.scroll
+                },
+                getBoundingClientRect() {
+                    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+                }
+            })
+
+            ScrollTrigger.defaults({ scroller: document.body })
+
+            window.addEventListener('resize', resize)
+
+
+
+
+
+
+
+
+
+
+
+            /* const target = document.querySelector('#SplitText');
+            const results = Splitting({ target: target, by: 'words' }); */
+
+            //  gsap.to(".btn-eff", { backgroundColor: "red", duration: 3 });
+            /*    gsap.to(results[0].words, {
+                   y: -20,
+                   duration: 0.5,
+                   ease: "ease-in",
+                   stagger: 0.01
+               }) */
+            /*    ScrollTrigger.create({
+                   trigger: '.banner',
+                   start: 'top top',
+                   end: 'bottom bottom',
+                   pin: '.btn-eff'
+               })
+    */
+            /*  const st = ScrollTrigger.create({
+         
+                 trigger: '.part1-content',
+                 start: 'top top',
+                 end: 'bottom',
+                 pin: '#gox1',
+                 scrub: true,
+                 markers:true
+             }) */
+
+        }
+        function openGrid() {
+            var element = document.getElementById("gridgrid");
+            element.classList.toggle("disable-grid");
+        }
+        function openFigma() {
+            window.open(
+                'https://www.figma.com/proto/SSuIxXZXAovQQFS7Tc0gkG/Untitled?node-id=2-4&scaling=scale-down-width&page-id=0%3A1',
+                '_blank'
+            );
+        }
+        function HoverText() {
+            let hoverText = document.querySelector(".HoverText");
+            const results = Splitting({ target: hoverText, by: 'chars' });
+            console.log(results)
+            let animation = gsap.to(results[0].chars, {
+                paused: true,
+                x: -6,
+                stagger: 0.2
+            });
+
+            hoverText.addEventListener("mouseenter", () => {
+                animation.play()
+
+            });
+            hoverText.addEventListener("mouseleave", () => {
+                animation.reverse()
+
+            });
+        }
+
+
+        var mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+
+        var cursor = {
+            el: $('#cursor'),
+            x: window.innerWidth / 2, y: window.innerHeight / 2, w: 100, h: 100,
+            update: function () {
+                l = this.x - this.w / 2;
+                t = this.y - this.h / 2;
+                this.el.css({
+                    'transform': 'translate3d(' + l + 'px, ' + t + 'px, 0)'
+                });
+            }
+        }
+
+        $(window).mousemove(function (e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        })
+
+        setInterval(move, 1000 / 60)
+
+        function move() {
+            //circle.x += (mouseX - circle.x) * 0.1; // old style
+            //circle.y += (mouseY - circle.y) * 0.1; // old style
+
+            /* cursor.x = lerp (cursor.x, mouseX, 0.1);
+            cursor.y = lerp (cursor.y, mouseY, 0.1);
+            cursor.update()  */
+        }
+
+        function lerp(start, end, amt) {
+            return (1 - amt) * start + amt * end
+        }
+
     </script>
 </body>
 <footer>
     <div class="footer">
-            <div class="pp1">
-              <div>
+        <div class="pp1">
+            <div>
                 <div class="img">
                     <image src="./assets/img/logo.png" alt="" />
                 </div>
                 <h3 class="xo1">Quicklinks</h3>
                 <h3 class="xo2">Residences</h3>
                 <h3 class="xo3">Social</h3>
-              </div>
             </div>
-            <div class="pp2">
-               <div>
-           
-                    <div>
-                        <h2>Masteri Centre Point</h2>
-                        <ul>
-                            <li>179 Xa Lo Ha Noi, Ward Thao Dien, Dist. 2, Ho Chi Minh City</li>
-                            <li>+84 934 88 6553</li>
-                            <li>Sale@Masteri.com.vn</li>
-                        </ul>
-                    </div>
-                    <ul class="uo1">
-                        <li>Home</li>
-                        <li>Contact Us</li>
-                        <li>Our Residences</li>
-                        <li>Discover Location</li>
-                        <li>View Gallery</li>
-                    </ul>
-                    <ul class="uo2">
-                        <li>Deluxe Apartment</li>
-                        <li>Superior Apartment</li>
-                        <li>Top Apartment</li>
-                        <li>2BR Apartment</li>
-                        <li>Balcony Apartment</li>
-                    </ul>
-                    <ul class="uo3">
-                        <li>FaceBook</li>
-                        <li>Youtube</li>
-                        <li>Email</li>
-                        <li>Instagram</li>
-                        <li>LinkedIn</li>
-                    </ul>
-             
-               </div>
-            </div>
-            <div class="pp3">
+        </div>
+        <div class="pp2">
+            <div>
+
                 <div>
-                    <h3 >Masteri Centre Point</h3>
-                    <p class="yo1">Terms & Conditions</p>
-                    <p class="yo2">Privacy Policy</p>
-                    <p class="yo3">©2020</p>
+                    <h2>Masteri Centre Point</h2>
+                    <ul>
+                        <li>179 Xa Lo Ha Noi, Ward Thao Dien, Dist. 2, Ho Chi Minh City</li>
+                        <li>+84 934 88 6553</li>
+                        <li>Sale@Masteri.com.vn</li>
+                    </ul>
                 </div>
+                <ul class="uo1">
+                    <li>Home</li>
+                    <li>Contact Us</li>
+                    <li>Our Residences</li>
+                    <li>Discover Location</li>
+                    <li>View Gallery</li>
+                </ul>
+                <ul class="uo2">
+                    <li>Deluxe Apartment</li>
+                    <li>Superior Apartment</li>
+                    <li>Top Apartment</li>
+                    <li>2BR Apartment</li>
+                    <li>Balcony Apartment</li>
+                </ul>
+                <ul class="uo3">
+                    <li>FaceBook</li>
+                    <li>Youtube</li>
+                    <li>Email</li>
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                </ul>
+
             </div>
+        </div>
+        <div class="pp3">
+            <div>
+                <h3>Masteri Centre Point</h3>
+                <p class="yo1">Terms & Conditions</p>
+                <p class="yo2">Privacy Policy</p>
+                <p class="yo3">©2020</p>
+            </div>
+        </div>
     </div>
 </footer>
-<script>
-    function myFunction() {
-       var element = document.getElementById("gridgrid");
-       element.classList.toggle("disable-grid");
-    }
-    function baseWeb() {
-        window.open(
-        'https://www.figma.com/proto/SSuIxXZXAovQQFS7Tc0gkG/Untitled?node-id=2-4&scaling=scale-down-width&page-id=0%3A1',
-        '_blank' 
-        );
-    }
-    </script>
+
+
 </html>
 <!--     <div class="wr">
         <div id="line"></div>

@@ -1,12 +1,14 @@
 :root {
+    --one--col : calc(100vw/24) ;
     --footer-text-dm : rgba(255, 255, 255, 0.70);
     --footer-bgcolor: #414142;
+    --color-active-text-onslidersection : #7D7D7D;
     --input-color:#B0B0B0;
     --bg-color-2 :#F5F5F5;
     --border-right-services-item: #DCDCDC;
     --color-text-bold: #363636;
     --color-text-onwhite : #555759;
-    --btn-large-circle-w : 270px;
+    --btn-large-circle-w : 255px;
     --gold:#C79358;
     --text: #555759;
     --tag-pin: #B6ADA5;
@@ -23,8 +25,22 @@
     color:white !important;
 }
 
-
-
+@font-face {
+    font-family:"degular";
+    src:url("https://use.typekit.net/af/174e41/00000000000000007735c867/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/174e41/00000000000000007735c867/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/174e41/00000000000000007735c867/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+    }
+    @font-face {
+        font-family:"degularBold";
+        src:url("https://use.typekit.net/af/36a2f5/00000000000000007735c877/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/36a2f5/00000000000000007735c877/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/36a2f5/00000000000000007735c877/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+        font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+        }
+        @font-face {
+            font-family:"degular-text";
+            src:url("https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+            font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+            }
+            
 @font-face {
     font-family: 'DegularLight';
     src: url('.././fonts/DegularDemo-Light.otf');
@@ -36,7 +52,11 @@
     font-display: swap;
 }
  */
-
+ @font-face {
+    font-family: 'FreightBigProBook';
+    src: url('.././fonts/FreightBigProBook.otf');
+    font-display: swap;
+}
 @font-face {
     font-family: 'FreightBigProMedium';
     src: url('.././fonts/FreightBigProMedium.otf');
@@ -47,6 +67,11 @@
     src: url('.././fonts/FreightBigProLight.otf');
     font-display: swap;
 }
+@font-face {
+    font-family: 'FreightBigProSemibold';
+    src: url('.././fonts/FreightBigProSemibold.otf');
+    font-display: swap;
+}
 html,body {
     margin:0;
     padding:0;
@@ -55,26 +80,42 @@ html,body {
 h1,h2,h3 {
     margin:0;
     padding:0;
-    font-family: "FreightBigProLight" ;
+    font-family: "FreightBigProBook" ;
 }
 p,li{
-    font-family: "DegularLight" ;
+    font-family: "degular-text",sans-serif;
     margin:0;
     padding:0;
 }
+button,a {
+    cursor: pointer;
+}
 section {
-  
+    
     /* padding: 0 65px; */
 }
+h1,h2,h3,p,span {
+/*     margin-left:5px !important; */
+}
+#cursor{
+    width:100px;
+    height:100px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    border:1px solid rgba(49, 48, 48, 0.1);
+    position:fixed;
+    border-radius:50%;
 
-
+    pointer-events: none;
+    user-select: none;
+  }
 /* Component */
 .btn-eff {
     width: var(--btn-large-circle-w);
     height: var(--btn-large-circle-w);
     position: absolute;
-    right:100px;
-    bottom:0;
+    right: 127px;
+    bottom: -5px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
@@ -87,10 +128,10 @@ section {
 .btn-eff > a > p {
     display: block;
     margin: auto;
-    font-size: 20px;
+    font-size: 17.6px;
     font-weight: 600;
     line-height: 32px;
-    letter-spacing: 0em;
+    letter-spacing: 0.25px;
     text-align: center;
     text-transform: uppercase;
 }
