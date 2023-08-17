@@ -134,7 +134,7 @@
 }
 /*  part1-content */
 .part1-content {
-    height: 200vh;
+    height: fit-content;
     grid-template-rows: 162px 30% 30% 7%;
 }
 .part1-content * {
@@ -517,7 +517,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: 64.42px repeat(2, auto);
 }
 .bg-sldier-section {
    
@@ -544,6 +544,16 @@
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 1;
+    height: 64.5px;
+}
+.slider-big > div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 156px;
+    height: 1px;
+    background: rgb(255, 255, 255);
 }
 .slider-big > div:nth-child(3)  {
     grid-row: 2;
@@ -578,29 +588,54 @@
     padding: 18.221px 0;
 }
 .detail-slider {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 50vh);
-    width: 100%;
-    height: 100vh;
+    width: 100%; */
+    height: 100%;
     position: relative;
 
 }
 .detail-slider > .layout {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 1;
+ position: relative;
+    width: 100%;
     height: 300px;
   
 } 
+
+
 .detail-slider > .layout >.content {
     display: grid;
     grid-template-columns: repeat(var(--numColDes), 1fr);
-    height: 88%;
-    margin: 60px 0;
+    height: 262px;
+    padding-top: 64px;
 }
 .detail-slider > .layout > .content * {
     grid-row: 1;
+}
+
+.detail-slider  .btn-next,
+.detail-slider  .btn-prev {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    
+}
+.detail-slider  .btn-next {
+    width: calc(var(--one--col));
+    left: calc(var(--one--col) * 13);;
+}
+.detail-slider  .btn-prev {
+    width: calc(var(--one--col));
+    left: calc(var(--one--col) * 9);;
+}
+.detail-slider  .btn-next svg {
+    transform: scale(0.72);
+}
+.detail-slider  .btn-prev svg {
+    transform: scale(0.72) rotate(180deg);
 }
 .detail-slider > .layout >.content > h2 {
     grid-column-start: 2;

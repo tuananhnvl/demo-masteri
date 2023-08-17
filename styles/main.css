@@ -138,16 +138,45 @@ h1,h2,h3,p,span {
 
 
 .space-btn-custom {
-    height: 72vh;
+    height: 546px;
     width: 100%;
     position: relative;
 }
+.custom2 {
+    height: 607px !important;
+}
+.custom2 >.btn-custom-a1 {
+    left:calc(var(--one--col)*10) !important;
+    top:48% !important;
+  
+}
+.btn-custom-a3 {
+    position: absolute;
+    left:calc(var(--one--col)*18);
+    top:72%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    display: flex;
+}
+.btn-custom-a3 > p {
+    color: var(--gold);
+    margin:auto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+}
 .space-btn-custom >.btn-custom-a1 {
     position: absolute;
-    top:42%;
+    /* top:42%;
     left: 60%;
-    transform: translate(-50%,-50%);
-   
+    transform: translate(-50%,-50%); */
+
+    left:calc(var(--one--col)*12);
+    top:53%;
+    transform: translateY(-50%);
     border-radius: 50%;
     width: 320px;
     height: 320px;
@@ -156,13 +185,9 @@ h1,h2,h3,p,span {
 .space-btn-custom >.btn-custom-a1 > p {
     color: var(--gold);
     margin:auto;
-
-    text-align: center;
-
-    font-size: 20px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 600;
-    line-height: normal;
+    line-height: 100%;
     text-transform: uppercase;
 
 }
