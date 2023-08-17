@@ -97,7 +97,7 @@
 
     font-family: "DegularLight";
     font-size: 12.24px;
-    font-style: normal;
+    
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
@@ -151,7 +151,7 @@
 
     font-family: "DegularLight";
     font-size: 16px;
-    font-style: normal;
+    
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.8px;
@@ -180,12 +180,13 @@
 }
 .part1-content>.tit>h2,
 .part2-content>.tit>h2  {
-    font-size: 51px;
-    font-style: normal;
+    font-size: 50px;
+    padding-right: 50px;
     height: fit-content;
     line-height: 115%;
     grid-column-start: 5;
     grid-column-end: 16;
+
     grid-row: 1;
     font-weight: 100;
     margin: 10px 0 0 -1px;
@@ -207,13 +208,13 @@
     color: var(--color-text-bold);
     font-family: "DegularLight";
     font-size: 12.24px;
-    font-style: normal;
+    
     font-weight: bold;
     line-height: normal;
 }
 .part1-content>.tit>h2>span,
 .part2-content>.tit>h2>span {
-    display: block;
+   
     color: var(--gold);
     font-size: 62px;
     line-height: 100%;
@@ -278,7 +279,7 @@
 }
 .part1-content>.content>.detail > div:nth-child(1) >h3 {
     font-size: 27.95px;
-    font-style: normal;
+    
     font-weight: 600;
     line-height: 107.94%;
     margin-top: 55px;
@@ -321,7 +322,7 @@
 
     text-align: justify;
     font-size: 14.24px;
-    font-style: normal;
+    
     font-weight: 500;
     line-height: 136.12%;
     margin-bottom: 63.95px;
@@ -334,7 +335,7 @@
 .part1-content>.content>.detail > div:nth-child(2)>.btn>p {
     margin: 0;
     font-size: 24px;
-    font-style: normal;
+    
     font-weight: 600;
     line-height: 118.75%;
 }
@@ -415,14 +416,14 @@
     font-family: "DegularLight";
     font-size: 24.2px;
     letter-spacing: 0.55px;
-    font-style: normal;
+    
     font-weight: bold;
     line-height: 100%;
     
 }
 .part2-content>.content>.detail ul li p {
     font-size: 24px;
-    font-style: normal;
+    
     font-weight: bold;
     line-height: 129.72%;
     margin-top: 28px;
@@ -489,7 +490,7 @@
 .part2-content>.content>.item-preview  > div:nth-child(1)>h3 {
     font-family: "DegularLight" !important;
     font-size: 24px;
-    font-style: normal;
+    
     font-weight: 600;
     line-height: 120% ;
     letter-spacing: 1px;
@@ -497,7 +498,7 @@
 }
 .part2-content>.content>.item-preview  > div:nth-child(1)>p  {
     font-size: 14px;
-    font-style: normal;
+    
     font-weight: 500;
     line-height: normal;
     align-items: center;
@@ -571,7 +572,7 @@
     text-align: center;
     color: var(--color-active-text-onslidersection);
     font-size: 18px;
-    font-style: normal;
+    
     font-weight: bold;
     line-height:  158.333%;
     padding: 18.221px 0;
@@ -607,7 +608,7 @@
     font-weight: 100;
     align-self: center;
     font-size: 61px;
-    font-style: normal;
+    
     font-family: 'FreightBigProBook' !important;
     line-height:  107.895%; /* */
     margin-top: -31px;
@@ -618,7 +619,7 @@
     align-self: start;
     grid-row: 1;
     font-size: 12.42px;
-    font-style: normal;
+    
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
@@ -632,7 +633,7 @@
     align-self: start;
     grid-row: 1;
     font-size: 27.72px;
-    font-style: normal;
+    
    
     font-weight: 600;
     line-height: 109.5%;
@@ -644,7 +645,7 @@
     grid-column-end: 15;
   
     font-size: 14.42px;
-    font-style: normal;
+    
     font-weight: 500;
   
     align-self: end;
@@ -698,7 +699,7 @@
     color: var(--color-text-onwhite);
     font-family:"degular-text" !important;
     font-size: 50px;
-    font-style: normal;
+    
     font-weight: bold;
     line-height: 72px; /* 112.5% */
     grid-column-start: 2;
@@ -713,7 +714,7 @@
     color: var(--tag-pin);
     font-family: "DegularLight" !important;
     font-size: 12.2px;
-    font-style: normal;
+    
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.8px;
@@ -756,7 +757,7 @@
     color: var(--gold);
     font-family: "DegularLight";
     font-size: 24.42px;
-    font-style: normal;
+    
     font-weight: bold;
     line-height: normal;
     letter-spacing: 1px;
@@ -766,7 +767,7 @@
     color: var(--color-text-onwhite);
     font-family: "DegularLight";
     font-size: 14.2px;
-    font-style: normal;
+    
     font-weight: 500;
     line-height: normal;
 }
@@ -803,7 +804,7 @@
     color: var(---input-color);
     font-family: "FreightBigProLight";
     font-size: 52px;
-    font-style: normal;
+    
     font-weight: 400;
     line-height: 82px; /* 128.125% */
 }
@@ -811,7 +812,7 @@
     color: var(--color-text-onwhite);
     font-family: "DegularLight";
     font-size: 24.2px;
-    font-style: normal;
+    
     font-weight: 600;
     line-height: 100%;
 }
@@ -861,7 +862,7 @@ footer {
 .footer > .pp2 h2 {
     font-family: "DegularLight" !important;
     font-size: 19px;
-    font-style: normal;
+    
     font-weight: 500;
     line-height: normal;
     margin-top: 42px;
@@ -901,7 +902,7 @@ footer {
     margin-bottom: 5px;
     font-family: "DegularLight" !important;
     font-size: 12.4px;
-    font-style: normal;
+    
     font-weight: 700;
     line-height: normal;
   
@@ -983,7 +984,7 @@ footer {
     grid-column-end: 7;
     font-family: "DegularLight" !important;
     font-size: 11px;
-    font-style: normal;
+    
     font-weight: 500;
     line-height: 140%; /* 19.6px */
     align-self: center;
