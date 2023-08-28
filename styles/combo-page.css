@@ -2,7 +2,7 @@
 .banner {
     width: 100%;
     height: fit-content;
-    grid-template-rows:repeat(2, auto)
+    grid-template-rows:79px auto;
 }
 .banner .banner-img {
     width: 100%;
@@ -24,7 +24,7 @@
 }
 .banner .tit {
     position: relative;
-    height: calc(108.7vh - 62px);
+    height: calc(100% - 62px);
     grid-column-start: 1;
     grid-column-end: 25;
     grid-template-rows: 30% 30% 30% 10%;
@@ -36,52 +36,51 @@
     max-width: 42vw;
     grid-row: 1;
     position: relative;
-    font-size: 82.72px;
+    font-size:104px;
     font-weight: 400;
-    line-height: 107%;
+    line-height: 110px;
     text-align: left;
-    padding: 21.5px 0;
-    word-spacing: 1.36px;
+    margin-top:30px;
+    word-spacing: 0px;
 }
 .banner .tit p {
     grid-column-start: 13;
     grid-column-end: 18;
     grid-row: 2;
-    font-size: 14px;
+    font-size: 17.7px;
     font-weight: 500;
-    line-height: 138%;
+    line-height: 24px;
     letter-spacing: 0.2px;
     text-align: left;
+    height: fit-content;
     word-spacing: -0.2px;
     font-family: 'DegularLight' !important;
-    margin: -8px 0 0px 2px;
+    margin: 10px 0 0px 2.5px;
 }
 .banner .tit span.type-name {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row: 2;
     font-family: "DegularLight";
-    font-size: 11.72px;
+    font-size: 15px;
     height: fit-content;
     font-weight: bold;
     line-height: 11.72px;
     letter-spacing: 1.5px;
     text-align: left;
-
-    margin-top: -4px;
+    margin-top: 18px;
 }
 .banner .tit span.type-num {
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row: 3;
-    font-size: 30px;
-    line-height: 53px;
+    font-size: 38px;
+    line-height: 100%;
     letter-spacing: 1.5px;
     height: fit-content;
     font-family: "DegularLight";
     font-weight: bold;
-
-    margin-top:-8.2px;
+    margin-top: 40px;
 }
 .banner .tit .type-state {
     grid-column-start: 13;
@@ -95,7 +94,7 @@
 .banner .tit .type-state  span {
 
     font-family: "DegularLight";
-    font-size: 12.24px;
+    font-size: 15.5px;
     
     font-weight: 700;
     line-height: normal;
@@ -103,33 +102,45 @@
 }
 /* NAVBAR */
 .nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    height: 62px;
-    border-bottom: 1px solid #B0B0B0;
+    height: 79px;
+ 
     align-items: center;
     grid-column-start: 2;
     grid-column-end: 24;
     grid-row: 1;
+}
+.nav::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 0.1px;
+    background-color: #B0B0B0;
 }
 .logo {
     font-family: "DegularLight";
     font-weight: bold;
     letter-spacing: 1.42px;
     line-height: 100%;
+    font-size: 20px;
 }
 .menu-item ul {
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    margin-top: 17px;
 }
 .menu-item ul li {
-    font-size: 11.24px;
+    font-size: 15px;
     line-height: 100%;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-align: left;
-    padding-left: 45.72px;
+    padding-left: 61px;
 }
 /*  part1-content */
 .part1-content {
@@ -163,60 +174,51 @@
     position: relative;
     width: fit-content;
     height: fit-content;
-    font-size: 12px;
+    font-size: 15.5px;
     letter-spacing: 1.2px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 12.95px;
     color: #B6ADA5 !important;
 }
 .part2-content>.tit>span.type-name p  {
     position: relative;
     width: fit-content;
     height: fit-content;
-    font-size: 12px;
+    font-size: 15.5px;
     letter-spacing: 1.2px;
     font-weight: bold;
-    margin-top: 12px;
+    margin-top: 14.5px;
     color: #B6ADA5 !important;
 }
 .part1-content>.tit{
-    padding: 164px 0 144px 0;
+    padding:204px 0 178px 0;
     height: fit-content;
 }
 .part2-content>.tit {
-    padding: 162px 0 126px 0;
+    padding:200px 0 160px 0;
     height: fit-content;
 }
 .part1-content>.tit>h2{
-    font-size: 51px;
+    font-size: 64px;
     height: fit-content;
-    line-height: 113%;
+    line-height: 72px;
     grid-column-start: 5;
     grid-column-end: 17;
     grid-row: 1;
     font-weight: 100;
-    letter-spacing: 0.15px;
+    /* letter-spacing: 0.15px; */
     margin-left: -1px;
     font-family: "FreightBigProMedium" !important;
 }
 .part2-content>.tit>h2  {
-
     grid-column-start: 5;
     grid-column-end: 17;
     grid-row: 1;
-
-
-    font-size: 50px;
+    font-size: 63.5px;
     height: fit-content;
-   
-
     font-weight: bold;
-
-    line-height: 114%;
-    letter-spacing: 1px;
-    word-spacing: -2px;
-    margin-left: -1px;
-
+    line-height: 72px;
+    letter-spacing: 0.4px;
     font-family: "DegularLight" !important;
 }
 .part1-content>.tit>div.type-state {
@@ -233,25 +235,34 @@
 .part1-content>.tit>div.type-state span {
     color: var(--color-text-bold);
     font-family: "DegularLight";
-    font-size: 12.24px;
+    font-size: 15.5px;
     
     font-weight: bold;
     line-height: normal;
 }
-.part1-content>.tit>h2>span,
-.part2-content>.tit>h2>span {
+.part1-content>.tit>h2>span{
    
     color: var(--gold);
-    font-size: 60px;
-    line-height: 110%;
-    font-weight: 200;
-    letter-spacing: 0.60px;
+    font-size: 76px;
+    line-height: 86px;
+    font-weight: normal;
+
     font-family: "FreightBigProBook" !important;
-    word-spacing: 1px;
+    word-spacing: 3.5px;
+}
+.part2-content>.tit>h2>span {
+    color: var(--gold);
+    font-size: 76px;
+    line-height: 82px;
+    font-weight: normal;
+    font-family: "FreightBigProBook" !important;
+    word-spacing: 3.5px;
 }
 /* content on part1 */
 .part1-content>.content {
-    height: 678px;
+    height: fit-content;
+    position: relative;
+    width: 100%;
 }
 .part1-content>.content>ul {
     padding: 0;
@@ -297,7 +308,7 @@
 .part1-content>.content>.detail > div:nth-child(1) >span {
     color: var(--gold);
     font-family: "DegularLight";
-    font-size: 31px;
+    font-size: 39px;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 100%;
@@ -306,18 +317,17 @@
     display: block;
 }
 .part1-content>.content>.detail > div:nth-child(1) >h3 {
-    font-size: 28px;
-    
+    font-size: 35.4px;
     font-weight: 600;
-    line-height: 107.94%;
-    margin-top: 55px;
+    line-height: 37.8px;
+    margin-top: 67px;
     letter-spacing: 0.5px;
     font-family: 'degular-text' !important;
 }
 
 .part1-content>.content>.detail > div:nth-child(1) >.ic {
     display: flex;
-    margin-top: 34.72px;
+    margin-top: 42px;
 }
 .part1-content>.content>.detail > div:nth-child(1) >.ic>div:nth-child(n) {
     display: flex;
@@ -330,13 +340,13 @@
     align-items: center;
 }
 .part1-content>.content>.detail > div:nth-child(1) >.ic>div:nth-child(n) span:nth-child(1) {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 .part1-content>.content>.detail > div:nth-child(1) >.ic>div:nth-child(n) span:nth-child(2) {
     font-weight: bold;
     line-height: 100%;
-    font-size: 14.42px;
+    font-size: 17.5px;
     margin:0 0 0 10px;
     font-family:"degularBold";
  
@@ -348,10 +358,10 @@
 }
 .part1-content>.content>.detail > div:nth-child(2) >p {
     text-align: justify;
-    font-size: 14.24px;
-    font-weight: 500;
-    line-height: 136.12%;
-    margin-bottom: 65px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-bottom: 79px;
     letter-spacing: 0px;
 }
 .part1-content>.content>.detail > div:nth-child(2)>.btn {
@@ -360,9 +370,9 @@
 }
 .part1-content>.content>.detail > div:nth-child(2)>.btn>p {
     margin: 0;
-    font-size: 25px;
+    font-size: 31.5px;
     font-weight: 600;
-    line-height: 118.75%;
+    line-height: normal;
     letter-spacing: 0.5px;
 }
 .part1-content>.content>.detail > div:nth-child(2)>.btn>span {
@@ -440,17 +450,17 @@
 .part2-content>.content>.detail ul li span {
     color: var(--gold);
     font-family: "DegularLight";
-    font-size: 24.2px;
+    font-size: 31px;
     letter-spacing: 0.55px;
-    
     font-weight: bold;
-    line-height: 100%;
-    
+    line-height: normal;
+    display: block;
+    margin-top: -3.5px;
 }
 .part2-content>.content>.detail ul li p {
-    font-size: 24.5px;
+    font-size: 31px;
     font-weight: bold;
-    line-height: 123%;
+    line-height: 38px;
     margin-top: 28px;
     letter-spacing: 0.5px;
 }
@@ -461,8 +471,8 @@
  
     content: "DRAG";
     position: absolute;
-    width: 95px;
-    height: 95px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     top: 46.5%;
     right: 0;
@@ -472,9 +482,10 @@
     justify-content: center;
     background: var(--gold);
     font-family: "degularBold";
-    font-size: 14px;
+    font-size: 17.5px;
     color: white;
     letter-spacing: 1px;
+    text-align: center;
 }
 .part2-content>.content>.img {
     grid-column-start: 11;
@@ -483,7 +494,7 @@
    
 }
 .part2-content>.content>.img,.part2-content>.content>.item-preview, .part2-content>.content>.img {
-    height: 584px !important;
+    height: 730px !important;
 }
 .part2-content>.content>.img img {
     width: 100%;
@@ -515,18 +526,19 @@
 
 .part2-content>.content>.item-preview  > div:nth-child(1)>h3 {
     font-family: "DegularLight" !important;
-    font-size: 25px;
+    font-size: 31px;
     font-weight: 600;
-    line-height: 119%;
+    line-height: 38px;
     letter-spacing: 0.42px;
     word-spacing: 0px;
     align-items: start;
 
+
 }
 .part2-content>.content>.item-preview  > div:nth-child(1)>p  {
-    font-size: 14.5px;
+    font-size: 18px;
     font-weight: normal;
-    line-height: normal;
+    line-height: 24px;
     align-items: center;
     margin: auto;
     display: block;
@@ -544,7 +556,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 64.42px repeat(2, auto);
+    grid-template-rows: 80px auto;
 }
 .bg-sldier-section {
    
@@ -571,7 +583,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 1;
-    height: 64.5px;
+    height: 80px;
 }
 .slider-big > div:nth-child(2)::after {
     content: "";
@@ -594,7 +606,7 @@
 
     display: flex;
     justify-content: center;
-    height: 64.5px;
+    height: 80px;
     align-items: center;
 }
 .tit-slider >div:nth-child(n) {
@@ -610,9 +622,9 @@
 .tit-slider >div:nth-child(n) > p {
     text-align: center;
     color: var(--color-active-text-onslidersection);
-    font-size: 17.5px;
+    font-size: 22px;
     font-weight: bold;
-    line-height: 100%;
+    line-height: 38px;
     letter-spacing: 1px;
     font-family: "DegularLight" !important;
 }
@@ -636,8 +648,8 @@
 .detail-slider > .layout >.content {
     display: grid;
     grid-template-columns: repeat(var(--numColDes), 1fr);
-    height: 262px;
-    padding-top: 64px;
+    height: 323px;
+    padding-top: 79px;
 }
 .detail-slider > .layout > .content * {
     grid-row: 1;
@@ -671,10 +683,10 @@
     grid-column-end: 11;
     font-weight: 100;
     align-self: center;
-    font-size: 61px;
+    font-size: 76px;
     
     font-family: 'FreightBigProBook' !important;
-    line-height:  107.895%; /* */
+    line-height:  82px;
     margin-top: -31px;
 }
 .detail-slider > .layout > .content > span {
@@ -682,8 +694,7 @@
     grid-column-end: 4;
     align-self: start;
     grid-row: 1;
-    font-size: 12.42px;
-    
+    font-size: 15.8px;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
@@ -696,11 +707,9 @@
     grid-column-end: 16;
     align-self: start;
     grid-row: 1;
-    font-size: 27.72px;
-    
-   
+    font-size: 35px;
     font-weight: 600;
-    line-height: 109.5%;
+    line-height: 38px;
     letter-spacing: 0.72px;
     font-family: "DegularLight" !important;
 }
@@ -708,12 +717,12 @@
     grid-column-start: 10;
     grid-column-end: 15;
   
-    font-size: 14.42px;
+    font-size: 17.5px;
     
     font-weight: 500;
   
     align-self: end;
-    line-height: 136%;
+    line-height: normal;
     font-family: 'DegularLight' !important;
 }
 .detail-slider > .layout > .content > div.process {
@@ -723,7 +732,7 @@
     display: flex;
 }
 .detail-slider > .layout > .content > div.process span {
-    font-size: 11.72px;
+    font-size: 15px;
     letter-spacing: 1.5px;
     font-family: "DegularLight" !important;
     font-weight: bold;
@@ -765,16 +774,16 @@
 .contact__1 > h2,
 .contact__2 > h2 {
     color: var(--color-text-onwhite);
-    font-family:"degular-text" !important;
-    font-size: 50px;
+    font-family: "degular-text" !important;
+    font-size: 63px;
     letter-spacing: 1px;
     font-weight: bold;
-    line-height: 72px; /* 112.5% */
+    line-height: 72px;
     grid-column-start: 2;
     grid-column-end: 10;
 }
 .contact__1 > h2 {
-    margin-top: 51px;
+    margin-top: 75px;
     padding: 0;
 
 }
@@ -791,14 +800,14 @@
     grid-column-end: 4;
     grid-row: 1;
     height: fit-content;
-    margin-top: 160px;
+    margin-top: 200px;
 }
 .contact__1 div.maps {
     grid-column-start: 10;
     grid-column-end: 15;
 
     height: calc(var(--one--col) * 5);
-    margin-top: 61px;
+    margin-top: 75px;
     overflow: hidden;
 }
 .contact__1 div.info {
@@ -807,23 +816,24 @@
     display: flex;
     flex-direction: column;
     justify-content: unset;
-    padding-top: 61px;
+    padding-top: 75px;
 }
 .contact__1 div.info > div:nth-child(1) {
     margin-top: 22px;
 }
 .contact__1 div.info > div:nth-child(2) {
-    margin-top: 50px;
+    margin-top: 56px;
 }
 .contact__1 div.info > div:nth-child(n) {
-    padding-top: 0;
+    padding-top: 5px;
   
     display: block;
     position: relative;
 }
 .contact__1 div.info ul,
 .contact__1 div.info p {
-    margin: 16.5px 0 0 0;
+    margin: 19.1px 0 0 0;
+    display: block;
 }
 .contact__1 div.info ul {
     padding:0;
@@ -833,7 +843,7 @@
 .contact__1 div.info h3 {
     color: var(--gold);
     font-family: "DegularLight";
-    font-size: 24.42px;
+    font-size:31px;
     
     font-weight: bold;
     line-height: normal;
@@ -844,7 +854,7 @@
 .contact__1 div.info ul li {
     color: var(--color-text-onwhite);
     font-family: "DegularLight";
-    font-size: 14.2px;
+    font-size:18px;
     
     font-weight: 500;
     line-height: normal;
@@ -855,7 +865,7 @@
 .contact__2 > h2,
 .contact__2 > div.input {
     grid-row: 1;
-    margin-top: 87px;
+    margin-top: 120px;
 }
 .contact__2 > div.form {
     grid-row: 2;
@@ -872,7 +882,7 @@
     grid-column-start: 10;
     grid-column-end: 14;
     display: flex;
-    height: 321px;
+    height: 420px;
     align-items: center;
 }
 
@@ -881,12 +891,16 @@
     border: none;
     color: var(---input-color);
     font-family: "FreightBigProLight";
-    font-size: 52px;
+    font-size: 63.5px;
     font-weight: 400;
     line-height: 82px;
     box-sizing: border-box;
     display: block;
     padding: 0;
+    margin-left: 3px;
+}
+.contact__2 > div.input input:not(:first-child) {
+    margin-top:20px;
 }
 .contact__2 > div.input input::placeholder {
     color: var(--placeholder-input);
@@ -894,10 +908,11 @@
 .contact__2 > div.form p {
     color: var(--color-text-onwhite);
     font-family: "DegularLight";
-    font-size: 24.2px;
-    
+    font-size: 31px;
     font-weight: 600;
-    line-height: 100%;
+    line-height: 38px;
+    margin-left: 3px;
+    letter-spacing: 0;
 }
 
 .contact__2 > div.form span {
@@ -919,7 +934,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(var(--numColDes), 1fr);
     grid-template-columns: repeat(3, 1fr);
-    height: 100%;
+    height: 557px;
 }
 
 .footer * {
@@ -931,7 +946,7 @@ footer {
     grid-column-end: 19;
     grid-row: 1;
    
-    height: 109px;
+    height: 135px;
    
 }
 .footer > .pp2 {
@@ -944,11 +959,10 @@ footer {
 }
 .footer > .pp2 h2 {
     font-family: "DegularLight" !important;
-    font-size: 19px;
-    
+    font-size: 24px;
     font-weight: 500;
     line-height: normal;
-    margin-top: 40px;
+    margin-top: 23px;
 }
 
 .footer > .pp3 {
@@ -984,7 +998,7 @@ footer {
 .footer > .pp1 > div > h3:nth-child(n) {
     margin-bottom: 5px;
     font-family: "DegularLight" !important;
-    font-size: 12.4px;
+    font-size: 15.5px;
     
     font-weight: 700;
     line-height: normal;
@@ -1037,19 +1051,20 @@ footer {
 }
 .footer > .pp2 > div > ul {
     padding: 0;
-    margin-top:44px;
+    margin-top: 27px;
     list-style-type: none;
 }
 
 .footer > .pp2 > div > div > ul li {
-    font-size: 14.2px;
+    font-size: 18px;
+    line-height: 120%;
     color: var(--footer-text-dm) !important;
-    margin-bottom: 3px;
+
 }
 
 
 .footer > .pp2 > div > div > ul li:first-child{
-    margin-top: 18px;
+    margin-top: 24px;
     
 }   
 .footer > .pp2 > div > div {
@@ -1060,8 +1075,8 @@ footer {
 .footer > .pp2 >div> ul li{
     margin-bottom: 14.4px;
     color: var(--footer-text-dm) !important;
-    font-size: 15.5px;
-    line-height: 19.5px;
+    font-size:19px;
+    line-height:normal;
     letter-spacing: 0.15px;
  
 }
@@ -1070,7 +1085,7 @@ footer {
     grid-column-start: 2;
     grid-column-end: 7;
     font-family: "DegularLight" !important;
-    font-size: 11px;
+    font-size: 14px;
     
     font-weight: 500;
     line-height: 140%; /* 19.6px */
@@ -1079,10 +1094,10 @@ footer {
 }
 .footer > .pp3 > div > p{
     align-self: center;
-    font-size: 11px;
+    font-size: 14px;
     color:var(--footer-text-dm) !important;
     margin-top: -6px;
-    
+    line-height: 140%; /* 19.6px */
     font-weight: normal;
     
 }
