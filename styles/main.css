@@ -157,11 +157,11 @@ h1,h2,h3,p,span {
     position: relative;
 }
 .custom2 {
-    height: 760px !important;
+    height: 761px !important;
 }
 .custom2 >.btn-custom-a1 {
     left:calc(var(--one--col)*10) !important;
-    top:48% !important;
+    top:47.5% !important;
   
 }
 .btn-custom-a3 {
@@ -199,8 +199,10 @@ h1,h2,h3,p,span {
     font-weight: 600;
     line-height: normal;
     letter-spacing: 1px;
+    word-spacing: -0.5px;
     text-transform: uppercase;
-
+    transform: translateY(-20%);
+    text-align: center;
 }
 
 
@@ -215,5 +217,13 @@ h1,h2,h3,p,span {
     height: 200px;
     z-index: 9999;
     background: unset;
+}
+
+
+/* custom */
+.break-c1 {
+    width:25px;
+    height:auto;
+    display:inline-block;
 }
 
