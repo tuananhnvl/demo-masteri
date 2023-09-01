@@ -1,0 +1,105 @@
+
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4BEDC2;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0) skewX(0);
+  transform-origin: top left;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
+.change--style--barbar * {
+    color:black !important;
+}
+
+
+#banner-eff-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+#banner-imgmoreeee {
+
+  /* 
+  const targetBGFull = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+const targetBGHalf = 'polygon(20% 20%, 60% 20%, 60% 60%, 20% 60%)'
+  */
+  
+ /*  clip-path: polygon(20% 20%, 60% 20%, 60% 60%, 20% 60%); */
+
+}
+.banner-img--clone {
+
+    position: absolute;
+    z-index: -1;
+    overflow:hidden;
+/*     width: 100%;
+    height: 100%; */
+
+   
+}
+
+.banner-img--clone img {
+    width: 100%;
+    height: auto;
+   
+}
+#banner-eff-container > div:nth-child(n) {
+
+}
+/* #banner-eff-container > div:nth-child(1) {
+  clip-path: polygon(5% 10%, 25% 10%, 25% 90%, 5% 90%);
+}
+#banner-eff-container > div:nth-child(2) {
+  clip-path: polygon(77% 56%, 100% 56%, 100% 100%, 77% 100%);
+}
+#banner-eff-container > div:nth-child(3) {
+  clip-path: polygon(84% 16%, 100% 10%, 100% 46%, 76% 33%);
+}
+#banner-eff-container > div:nth-child(4) {
+  clip-path: polygon(41% 75%, 66% 79%, 70% 100%, 29% 100%);
+}
+ */
+/* #banner-eff-container > div:nth-child(1) {
+  left: calc(var(--one--col) * 1);
+  top: calc(var(--one--col) * 2);
+  width: calc(var(--one--col) * 5);
+  height: calc(var(--one--col) * 5);
+}
+#banner-eff-container > div:nth-child(2) {
+    left: calc(var(--one--col) * 1);
+  top: calc(var(--one--col) * 10);
+  width: calc(var(--one--col) * 5);
+  height: calc(var(--one--col) * 5);
+}
+#banner-eff-container > div:nth-child(3) {
+    right: calc(var(--one--col) * 1);
+    top: calc(var(--one--col) * 2);
+    width: calc(var(--one--col) * 5);
+    height: calc(var(--one--col) * 5);
+}
+#banner-eff-container > div:nth-child(4) {
+    right: calc(var(--one--col) * 1);
+    bottom: calc(var(--one--col) * 0);
+    width: calc(var(--one--col) * 4);
+    height: calc(var(--one--col) * 4);
+}
+
+ */

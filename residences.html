@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/lenis.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/hook.css">
+    <link rel="stylesheet" href="./styles/gsap.css">
+    <link rel="stylesheet" href="./styles/combo-page.css">
+</head>
+
+<body data-barba="wrapper">
+    <div id="cursor"></div>
+    <div id="tool">
+        <button onclick="openGrid()" id="togglegrid">Grid</button>
+        <button onclick="openFigma()">WEB DESIGN</button>
+    </div>
+    <div class="demo-grid" style="opacity:1" id="gridgrid">
+        <div class="grid-system">
+            <span class="col">1</span>
+            <span class="col">2</span>
+            <span class="col">3</span>
+            <span class="col">4</span>
+            <span class="col">5</span>
+            <span class="col">6</span>
+            <span class="col">7</span>
+            <span class="col">8</span>
+            <span class="col">9</span>
+            <span class="col">10</span>
+            <span class="col">11</span>
+            <span class="col">12</span>
+            <span class="col">13</span>
+            <span class="col">14</span>
+            <span class="col">15</span>
+            <span class="col">16</span>
+            <span class="col">17</span>
+            <span class="col">18</span>
+            <span class="col">19</span>
+            <span class="col">20</span>
+            <span class="col">21</span>
+            <span class="col">22</span>
+            <span class="col">23</span>
+        </div>
+    </div>
+    <div class="loading-container">
+        <div class="loading-screen">
+        </div>
+    </div>
+    <main data-barba="container" data-barba-namespace="aboutus">
+      
+        <section class="banner grid-system change--style--barbar">
+            <div class="banner-img" id="banner-img" style="transform: scale(0.15);left: 200px;">
+                <image src="./assets/img/banner.png" alt="" />
+            </div>
+          <div id="banner-eff-container">
+            <div class="banner-img--clone">
+                <image src="./assets/img/banner.png" alt="" />
+            </div>
+            <div class="banner-img--clone">
+                <image src="./assets/img/banner.png" alt="" />
+            </div>
+            <div class="banner-img--clone">
+                <image src="./assets/img/banner.png" alt="" />
+            </div>
+            <div class="banner-img--clone">
+                <image src="./assets/img/banner.png" alt="" />
+            </div>
+          </div>
+      
+            <div class="nav">
+                <div class="logo">
+                    <a href="/index.html">
+                        MASTERI
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <ul>
+                        <li><a class="HoverText">About</a></li>
+                        <li><a class="HoverText" href="residences.html">Residences</a></li>
+                        <li><a class="HoverText">Location</a></li>
+                        <li><a class="HoverText" href="gallery.html">Gallery</a></li>
+                        <li><a class="HoverText">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+          
+            <div class="tit  grid-system">
+             
+            </div>
+            <div class="btn-eff">
+            
+            </div>
+        </section>
+    </main>
+</body>
+<script src="libs.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+<script src="barba-config.js"></script>
+<script src="lenis-gsap-config.js"></script>
+</html>
