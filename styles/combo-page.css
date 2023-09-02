@@ -140,13 +140,20 @@
     display: flex;
     flex-direction: row;
     margin-top: 17px;
+
 }
 .menu-item ul li {
+    padding: 5px 0 8px 0;
+    margin-left: 61px;
+    cursor: pointer;
+}
+.menu-item ul li a {
     font-size: 15px;
     line-height: 100%;
     letter-spacing: 0.5px;
     text-align: left;
-    padding-left: 61px;
+    text-decoration: none;
+   
 }
 /*  part1-content */
 .part1-content {

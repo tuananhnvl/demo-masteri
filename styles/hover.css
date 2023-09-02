@@ -1,0 +1,94 @@
+
+li {
+  perspective: 200px;
+}
+
+.underline-trans {
+  transform: translateX(101%);
+  width: 100%;
+  height: 0.1px;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  background-color: white;
+  pointer-events: none;
+}
+
+/* .in-top .underline-trans {
+   transform-origin: center;
+   animation: in-top 300ms ease-in 0ms 1 forwards;
+}
+
+.in-bottom .underline-trans {
+  transform-origin:center;
+  animation: in-bottom 300ms ease-in 0ms 1 forwards;
+} */
+.in-left .underline-trans {
+  transform-origin:center;
+  animation: in-left 300ms ease-in 0ms 1 forwards;
+}
+.in-right .underline-trans {
+    transform-origin: center;
+    animation: in-right 300ms ease-in 0ms 1 forwards;
+  }
+
+/* .out-top .underline-trans {
+  transform-origin: center;
+  animation: out-top 300ms ease-in 0ms 1 forwards;
+}
+
+.out-bottom .underline-trans {
+  transform-origin: center;
+  animation: out-bottom 300ms ease-in 0ms 1 forwards;
+} */
+.out-left .underline-trans {
+  transform-origin:center;
+  animation: out-left 300ms ease-out 0ms 1 forwards;
+}
+.out-right .underline-trans {
+    transform-origin:center;
+    animation: out-right 300ms ease-out 0ms 1 forwards;
+  }
+
+@keyframes in-right {
+    from {transform: translateX(101%)}
+    to   {transform: translateX(0px)}
+}
+@keyframes in-left {
+    from {transform: translateX(-101%)}
+    to   {transform: translateX(0px)}
+  }
+/* @keyframes in-top {
+    from {transform: translateX(101%)}
+    to   {transform: translateX(0px)}
+  }
+@keyframes in-bottom {
+    from {transform: translateX(-101%)}
+    to   {transform: translateX(0px)}
+}
+ */
+
+/* @keyframes out-top {
+    from {transform: translateX(0%)}
+    to   {transform: translateX(-101%)}
+}
+
+@keyframes out-bottom {
+    from {transform: translateX(-101%)}
+    to   {transform: translateX(0%)}
+} */
+@keyframes out-left {
+    from {transform: translateX(0%)}
+    to   {transform: translateX(-101%)}
+}
+@keyframes out-right {
+    from {transform: translateX(0%)}
+    to   {transform: translateX(101%)}
+}
+
+
+li {
+  position: relative;
+  overflow:hidden;
+}
+

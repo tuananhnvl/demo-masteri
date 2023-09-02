@@ -26,7 +26,9 @@
 .change--style--barbar * {
     color:black !important;
 }
-
+.change--style--barbar .underline-trans {
+  background-color: black;
+}
 
 #banner-eff-container {
     position: absolute;

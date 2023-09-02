@@ -7,7 +7,39 @@ const targetBGFull = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
 const targetBGHalf = 'polygon(30% 20%, 70% 20%, 70% 60%, 30% 60%)'
 const listClipGalleryBannerOff = ['5% 10%, 5% 10%, 5% 90%, 5% 90%', '100% 56%, 100% 56%, 100% 100%, 100% 100%', '100% 0%, 100% 0%, 100% 0%, 76% 33%', '41% 100%, 66% 100%, 70% 100%, 29% 100%']
 const listClipGalleryBanner = ['5% 10%, 25% 10%, 25% 90%, 5% 90%', '77% 56%, 100% 56%, 100% 100%, 77% 100%', '84% 16%, 100% 10%, 100% 46%, 76% 33%', '41% 75%, 66% 79%, 70% 100%, 29% 100%']
+const directions  = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
 
+function HoverFuncion(){
+  const nodes = Array.prototype.slice.call(document.querySelectorAll('.menu-item ul')[0].children)
+const classNames = ['in', 'out'].map((p) => Object.values(directions).map((d) => `${p}-${d}`)).reduce((a, b) => a.concat(b));
+
+  const getDirectionKey = (ev, node) => {
+    const { width, height, top, left } = node.getBoundingClientRect();
+
+    const l = ev.pageX - (left + window.scrollX);
+    const t = ev.pageY - (top + window.scrollY);
+
+    const x = (l - (width/2) * (width > height ? (height/width) : 1));
+    const y = (t - (height/2) * (height > width ? (width/height) : 1));
+    return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+  }
+
+  class Item {
+    constructor(element) {
+      this.element = element;    
+      this.element.addEventListener('mouseover', (ev) => this.update(ev, 'in'));
+      this.element.addEventListener('mouseout', (ev) => this.update(ev, 'out'));
+    }
+    
+    update(ev, prefix) {
+      
+      this.element.classList.remove(...classNames);
+      this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
+    }
+  }
+
+  nodes.forEach(node => new Item(node));
+}
 
 function pageTransitionIn(data) {
 
@@ -39,8 +71,9 @@ function pageTransitionIn(data) {
 }
 // Function to add and remove the page transition screen
 function pageTransitionOut(container) {
-
+  HoverFuncion()
   if (container.getAttribute('data-barba-namespace') === 'home') {
+   
     return gsap
       .timeline({ delay: 0.2 }) // More readable to put it here
       .add('start') // Use a label to sync screen and content animation
@@ -53,6 +86,7 @@ function pageTransitionOut(container) {
       }, 'start')
   }
   else if (container.getAttribute('data-barba-namespace') === 'gallery') {
+    
     let targets = gsap.utils.toArray(container.children[0].children[1].children);
     return gsap
       .timeline({ delay: 0.2 }) // More readable to put it here
@@ -82,7 +116,7 @@ function pageTransitionOut(container) {
 
 // Function to animate the content of each page
 function contentAnimation(container) {
-
+  HoverFuncion()
 
   // $(container.querySelector('.green-heading-bg')).addClass('show')
 

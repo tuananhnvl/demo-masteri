@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log('done')
-    init()
-    check()
-    HoverText()
+    console.log('load?')
+   // init()
+//check()
+   // HoverText()
 })
 
 
